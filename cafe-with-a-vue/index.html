@@ -30,7 +30,7 @@
 						<p v-if="item.inStock">En stock</p>
 						<p v-else>En rupture de stock</p>
 						<div>
-							<label for="add-item-quantity">Quantité :</label>
+							<label for="add-item-quantity">Quantité :{{ item.quantity }}</label>
 							<input id="add-item-quantity" type="number" />
 							<button>Ajouter au panier d'achat</button>
 						</div>
@@ -75,7 +75,7 @@
 								alt: "Un croissant"
 							},
 							inStock: true,
-							quantity: 1
+							quantity: 0
 						},
 						{
 							name: "Baguette de pain",
@@ -84,7 +84,7 @@
 								alt: "Quatre baguettes de pain"
 							},
 							inStock: true,
-							quantity: 1
+							quantity: 0
 						},
 						{
 							name: "Éclair",
@@ -93,7 +93,7 @@
 								alt: "Éclair au chocolat"
 							},
 							inStock: false,
-							quantity: 1
+							quantity: 0
 						}
 					]
 				},
@@ -103,7 +103,13 @@
 
 						return `Copyright ${this.restaurantName} ${currentYear}`
 					}
+				},
+				methods: {
+					addToQuantity(){
+						item.quantity += item.quantity
+					}
 				}
+				
 			})
 		</script>
 	</body>
