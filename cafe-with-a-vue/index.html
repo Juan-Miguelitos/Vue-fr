@@ -32,7 +32,7 @@
 						<div>
 							<label for="add-item-quantity">Quantité :{{ item.quantity }}</label>
 							<input id="add-item-quantity" type="number"  />
-							<button @click=>Ajouter au panier d'achat</button>
+							<button @click=addToShoppingCart(item.shoppingCart)>Ajouter au panier d'achat</button>
 						</div>
 					</div>
 				</div>
@@ -106,7 +106,7 @@
 					}
 				},
 				methods: {
-					addToQuantity(amount){
+					addToShoppingCart(amount){
 						this.shoppingCart += amount
 					}
 				}
