@@ -25,20 +25,10 @@
 						src="https://via.placeholder.com/300x150"
 						alt=""
 					/>
-					<div>
-						<h3>Nom de l'article</h3>
-						<ul>
-							<li v-for="item in simpleMenu">
-								{{ item.name }}
-							</li>
-						</ul>
-						<p>En stock</p>
-						<ul>
-							<li v-if="item inStock">
-								{{ item.name }}
-							</li>
-						</ul>
-						<p>En rupture de stock</p>
+					<div v-for="item in simpleMenu">
+						<h3>Nom de l'article: {{ item.name }}</h3>
+						<p v-if="item.inStock">En stock</p>
+						<p v-else>En rupture de stock</p>
 						<div>
 							<label for="add-item-quantity">Quantité :</label>
 							<input id="add-item-quantity" type="number" />
