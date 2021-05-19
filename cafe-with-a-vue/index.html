@@ -39,7 +39,7 @@
 			</section>
 
 			<aside class="shopping-cart">
-				<h2>Panier d'achat: 0 articles</h2>
+				<h2>Panier d'achat: {{ shoppingCart }} articles</h2>
 			</aside>
 
 			<h2>Contactez nous</h2>
@@ -67,6 +67,7 @@
 					email: "hello@cafewithavue.bakery",
 					phone: "01 88 88 88 88",
 					restaurantName: "La belle vue",
+					shoppingCart: 0,
 					simpleMenu: [
 						{
 							name: "Croissant",
@@ -105,8 +106,8 @@
 					}
 				},
 				methods: {
-					addToQuantity(){
-						item.quantity += item.quantity
+					addToQuantity(amount){
+						this.shoppingCart += amount
 					}
 				}
 				
