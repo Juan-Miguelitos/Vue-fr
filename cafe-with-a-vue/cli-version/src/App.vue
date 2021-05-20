@@ -77,8 +77,8 @@ export default {
 							quantity: 1
 						}
 					]
-				},
-  },
+			}
+	},
 				computed: {
 					copyright() {
 						const currentYear = new Date().getFullYear()
