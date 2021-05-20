@@ -41,7 +41,57 @@ export default {
   components: {
     HelloWorld
   }
-}
+  data() {
+	  address: "18 avenue du Beurre, Paris, France",
+					email: "hello@cafewithavue.bakery",
+					phone: "01 88 88 88 88",
+					restaurantName: "La belle vue",
+					shoppingCart: 0,
+					simpleMenu: [
+						{
+							name: "Croissant",
+							image: {
+								source: "./images/croissant.jpg",
+								alt: "Un croissant"
+							},
+							inStock: true,
+							quantity: 1
+						},
+						{
+							name: "Baguette de pain",
+							image: {
+								source: "./images/french-baguette.jpeg",
+								alt: "Quatre baguettes de pain"
+							},
+							inStock: true,
+							quantity: 1
+						},
+						{
+							name: "Éclair",
+							image: {
+								source: "./images/eclair.jpg",
+								alt: "Éclair au chocolat"
+							},
+							inStock: false,
+							quantity: 1
+						}
+					]
+				},
+				computed: {
+					copyright() {
+						const currentYear = new Date().getFullYear()
+
+						return `Copyright ${this.restaurantName} ${currentYear}`
+					}
+				},
+				methods: {
+					addToShoppingCart(amount) {
+						this.shoppingCart += amount
+					}
+				}
+			})
+  
+
 </script>
 
 <style lang="scss">
