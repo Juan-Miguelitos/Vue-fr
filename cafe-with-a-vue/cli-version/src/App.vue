@@ -11,9 +11,13 @@
       <section class="menu">
 			<h2>Menu</h2>
 		<MenuItem
-			:v-for="item in simpleMenu"
+			v-for="item in simpleMenu"
 			:name="item.name"
-
+			:image="item.image"
+			:addToShoppingCart="addToShoppingCart"
+			:inStock="item.inStock"
+			:quantity="item.quantity"
+			:key="item.name"
 		/>
 		</section>
 
