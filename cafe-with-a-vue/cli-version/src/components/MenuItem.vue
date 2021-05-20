@@ -1,7 +1,13 @@
+<script>
+export default {
+  name: 'MenuItem',
+  props: [ "addToShoppingCart","name", "image", "inStock", "quantity" ]
+}
+</script>
+
 <template>
-    <h2>Menu</h2>
-        <img
-          class="menu-item__image" :src="item.image.source" :alt="item.image.alt"/>
+      <div class="menu-item">
+        <img class="menu-item__image" :src="item.image.source" :alt="item.image.alt"/>
         <div>
           <h3>{{ name }}</h3>
           <p v-if="inStock">En stock</p>
@@ -12,14 +18,8 @@
             <button @click="addToShoppingCart(quantity)">Ajouter au panier d'achat</button>
           </div>
         </div>
+      </div>
 </template>
-
-<script>
-export default {
-  name: 'MenuItem',
-  props: [ "addToShoppingCart","name", "image", "inStock", "quantity" ]
-}
-</script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
