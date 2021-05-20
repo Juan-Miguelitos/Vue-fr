@@ -90,7 +90,7 @@ export default {
 						this.shoppingCart += amount
 					}
 				}
-			})
+			}
   
 
 </script>
