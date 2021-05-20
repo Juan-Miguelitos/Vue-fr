@@ -10,7 +10,9 @@
 
       <section class="menu">
 			<h2>Menu</h2>
-
+		<MenuItem
+		v-for="item in simpleMenu"
+		/>
 		</section>
 
       <aside class="shopping-cart">
