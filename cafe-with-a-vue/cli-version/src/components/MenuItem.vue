@@ -1,18 +1,13 @@
 <template>
     <h2>Menu</h2>
         <img
-          class="menu-item__image"
-          :src="item.image.source"
-          :alt="item.image.alt"
-        />
+          class="menu-item__image" :src="item.image.source" :alt="item.image.alt"/>
         <div>
           <h3>{{ name }}</h3>
-          <p v-if="item.inStock">En stock</p>
+          <p v-if="inStock">En stock</p>
           <p v-else>En rupture de stock</p>
           <div>
-            <label for="add-item-quantity"
-              >Quantité : {{ quantity }}</label
-            >
+            <label for="add-item-quantity">Quantité : {{ quantity }}</label>
             <input
               v-model.number="item.quantity"
               id="add-item-quantity"
