@@ -9,13 +9,11 @@
           <div>
             <label for="add-item-quantity">Quantité : {{ quantity }}</label>
             <input
-              v-model.number="item.quantity"
+              v-model.number="quantity"
               id="add-item-quantity"
               type="number"
             />
-            <button @click="addToShoppingCart(quantity)">
-              Ajouter au panier d'achat
-            </button>
+            <button @click="addToShoppingCart(quantity)">Ajouter au panier d'achat</button>
           </div>
         </div>
 </template>
