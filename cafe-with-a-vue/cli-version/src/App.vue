@@ -40,7 +40,7 @@ export default {
   name: 'app',
   components: {
     HelloWorld
-  }
+  },
   data() {
 	  return {
 	  address: "18 avenue du Beurre, Paris, France",
@@ -90,8 +90,9 @@ export default {
 						this.shoppingCart += amount
 					}
 				}
-			}
-  
+	}
+}
+
 
 </script>
 
