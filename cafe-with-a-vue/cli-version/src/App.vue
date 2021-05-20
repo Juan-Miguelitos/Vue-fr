@@ -9,9 +9,9 @@
 			</p>
 
       <section class="menu">
-				<h2>Menu</h2>
+			<h2>Menu</h2>
 
-			</section>
+		</section>
 
       <aside class="shopping-cart">
 				<h2>Panier d'achat : {{ shoppingCart }} articles</h2>
