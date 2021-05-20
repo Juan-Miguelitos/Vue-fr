@@ -5,7 +5,7 @@
 <script>
 export default {
   name: 'MenuItem',
-  props: [ "name", "image",  ]
+  props: [ "addToShoppingCart","name", "image", "inStock", "quantity" ]
 }
 </script>
 
