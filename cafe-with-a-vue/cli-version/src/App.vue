@@ -78,6 +78,7 @@ export default {
 						}
 					]
 				},
+  },
 				computed: {
 					copyright() {
 						const currentYear = new Date().getFullYear()
@@ -90,7 +91,6 @@ export default {
 						this.shoppingCart += amount
 					}
 				}
-	}
 }
 
 
