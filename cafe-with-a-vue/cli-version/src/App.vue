@@ -34,12 +34,12 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MenuItem from './components/MenuItem.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    MenuItem
   },
   data() {
 	  return {
